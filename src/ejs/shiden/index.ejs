@@ -46,7 +46,7 @@
           </head>
 
           <body>
-            <%- include('_svg-defs'); %>>
+            <%- include('_svg-defs'); %>
 
               <header class="container">
 
@@ -526,14 +526,16 @@
               </script>
 
               <script>
+                // Hero background parallax on scrolling
                 window.addEventListener('scroll', function () {
                   var scrollPosition = window.pageYOffset;
-                  var bgParallax = document.getElementById('wrap');
-                  var limit = bgParallax.offsetTop + bgParallax.offsetHeight;
-                  if (scrollPosition > bgParallax.offsetTop && scrollPosition <= limit) {
-                    bgParallax.style.backgroundPositionY = (50 - 10 * scrollPosition / limit) + '%';
-                  } else {
-                    bgParallax.style.backgroundPositionY = '50%';
+                  var hero = document.querySelector('#hero');
+                  var body = document.querySelector('body');
+
+                  var limit = hero.offsetTop + hero.offsetHeight;
+
+                  if (scrollPosition <= limit) {
+                    body.style.backgroundPositionY = (10 * scrollPosition / limit) + '%';
                   }
                 });
               </script>

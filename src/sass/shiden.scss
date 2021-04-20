@@ -134,7 +134,6 @@ body {
   background-size: 2200px;
   background-repeat: no-repeat;
   background-position: top center;
-  // background-attachment: fixed;
   font-weight: 300;
 }
 
@@ -206,7 +205,7 @@ header {
 }
 
 #multichain {
-  background: linear-gradient(to bottom, transparent 0%, #000 50%);
+  background: linear-gradient(to bottom, transparent 10%, #000 50%);
   .multichain-inner {
     background-repeat: no-repeat;
     background-position: bottom center;
