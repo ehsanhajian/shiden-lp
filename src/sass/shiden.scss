@@ -86,17 +86,26 @@ h6 {
 h1 {
   font-size: 4.25rem;
   line-height: 1;
+  @include media-breakpoint-down(sm) {
+    font-size: 2.5rem;
+  }
 }
 h2 {
   font-size: 3.5rem;
   @include media-breakpoint-down(md) {
     font-size: 3rem;
   }
+  @include media-breakpoint-down(sm) {
+    font-size: 2rem;
+  }
 }
 h3 {
   font-size: 2.25rem;
   @include media-breakpoint-down(md) {
     font-size: 2rem;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 1.75rem;
   }
 }
 
@@ -108,8 +117,15 @@ h3 {
 
 a {
   color: $purple;
+  transition: color 0.15s ease-in-out;
+  img {
+    transition: opacity 0.15s ease-in-out;
+  }
   &:hover {
     color: lighten($purple, 10%);
+    img {
+      opacity: 0.8;
+    }
   }
 }
 
@@ -118,6 +134,7 @@ a {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
   border: 0;
   border-radius: 0.1rem;
+  transition: all 0.15s ease-in-out;
   &:hover {
     filter: brightness(1.2);
   }
@@ -135,6 +152,12 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   font-weight: 300;
+  @include media-breakpoint-down(md) {
+    background-size: 1900px;
+  }
+  @include media-breakpoint-down(sm) {
+    background-size: 1300px;
+  }
 }
 
 header {
@@ -179,7 +202,12 @@ header {
 }
 
 #hero {
-  min-height: calc(100vh - 90px);
+  @media (orientation: landscape) {
+    min-height: calc(100vh - 90px);
+  }
+  @media (orientation: portrait) {
+    min-height: 60vh;
+  }
   .hero-inner {
     width: 60%;
     @include media-breakpoint-down(lg) {
@@ -210,13 +238,23 @@ header {
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: 1700px;
-    min-height: 100vh;
-    padding: 100px 0 230px 0;
+    padding: 150px 0 250px 0;
+    @include media-breakpoint-down(md) {
+      background-size: 1200px;
+      padding: 150px 0 200px 0;
+    }
+    @include media-breakpoint-down(sm) {
+      background-size: 800px;
+      padding: 150px 0 100px 0;
+    }
   }
   h2 {
     font-size: 3rem;
     @include media-breakpoint-down(md) {
       font-size: 2.75rem;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 2rem;
     }
   }
   p {
@@ -226,6 +264,7 @@ header {
   .multichain-logo-list {
     li {
       text-align: center;
+      margin-bottom: 2rem;
       img {
         max-width: 150px;
         max-height: 80px;
@@ -275,21 +314,26 @@ header {
     @include media-breakpoint-down(md) {
       padding-right: 3rem;
     }
+    @include media-breakpoint-down(sm) {
+      padding: 0 1rem;
+    }
   }
   .unique-item--basic-income {
-    margin-top: -100px;
     padding-left: 5rem;
     @include media-breakpoint-down(md) {
-      margin-top: 0;
       padding-left: 3rem;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 0 1rem;
     }
   }
   .unique-item--multi-virtual-machine {
-    margin-top: -100px;
     padding-right: 5rem;
     @include media-breakpoint-down(md) {
-      margin-top: 0;
       padding-right: 3rem;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 0 1rem;
     }
   }
 }
@@ -302,11 +346,13 @@ header {
 }
 
 #deploy {
-  min-height: 100vh;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: top center;
   background-size: cover;
-  background-color: $black;
+  margin-bottom: 15rem;
+  @media (orientation: landscape) {
+    min-height: 100vh;
+  }
   .deploy-flow {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -316,10 +362,15 @@ header {
     @include media-breakpoint-down(md) {
       grid-template-columns: repeat(2, 1fr);
     }
+    @include media-breakpoint-down(sm) {
+      grid-template-columns: repeat(1, 1fr);
+    }
     li {
       background-color: rgba(#fff, 0.1);
       border-radius: 0.25rem;
       padding: 1.5rem;
+      transition: background-color 0.15s ease-in-out;
+      position: relative;
       &::before {
         font-family: "Monoton", cursive;
         counter-increment: item;
@@ -346,6 +397,25 @@ header {
         margin-top: 6rem;
         margin-bottom: -6rem;
       }
+      &::after {
+        background-color: #5928b1;
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 10;
+        transition: all 0.2s ease-in-out;
+        width: 0;
+        height: 0;
+        left: 0;
+        bottom: 0;
+      }
+      &:hover {
+        background-color: rgba(#fff, 0.15);
+        &::after {
+          width: 100%;
+          height: 6px;
+        }
+      }
       h3 {
         font-size: 1.375rem;
       }
@@ -354,12 +424,18 @@ header {
 }
 
 #join {
-  padding: 0 0 10rem 0;
-  background-color: $black;
+  margin-bottom: 10rem;
+  @include media-breakpoint-down(sm) {
+    padding: 0 1rem;
+  }
   .container {
     background-color: #130826;
     border-radius: 0.25rem;
     padding: 4rem;
+    position: relative;
+    @include media-breakpoint-down(sm) {
+      padding: 2rem;
+    }
   }
   .shiden-logo-mark {
     width: 132px;
@@ -367,8 +443,15 @@ header {
   }
   .join-text {
     max-width: 350px;
+    @include media-breakpoint-up(sm) {
+      position: sticky;
+      top: 1rem;
+    }
     h2 {
       line-height: 1;
+    }
+    @include media-breakpoint-down(sm) {
+      max-width: auto;
     }
   }
   .join-flow {
@@ -380,21 +463,22 @@ header {
       display: block;
       z-index: 1;
       position: absolute;
-      left: 31px;
+      left: 26px;
       top: 0;
       display: block;
-      height: calc(100% - 62px);
+      // height: calc(100% - 52px);
+      height: 100%;
       width: 1px;
     }
     li {
       font-size: 1.375rem;
       position: relative;
-      padding: 18px 0 0 80px;
+      padding: 12px 0 0 80px;
       min-height: 64px;
       &::before {
         counter-increment: item;
         content: counter(item);
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         position: absolute;
         left: 1px;
         top: 1px;
@@ -402,10 +486,10 @@ header {
         background-color: #130826;
         border-radius: 100%;
         display: block;
-        width: 62px;
-        height: 62px;
+        width: 52px;
+        height: 52px;
         text-align: center;
-        line-height: 62px;
+        line-height: 52px;
       }
       &::after {
         content: "";
@@ -415,8 +499,8 @@ header {
         top: 0;
         background: linear-gradient(135deg, #a12bbe, #5928b1, #1297c0);
         z-index: 2;
-        width: 64px;
-        height: 64px;
+        width: 54px;
+        height: 54px;
         border-radius: 100%;
       }
     }
@@ -429,8 +513,7 @@ header {
 }
 
 #backers {
-  padding: 0 0 10rem 0;
-  background-color: $black;
+  margin-bottom: 10rem;
   .logo-list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -438,7 +521,10 @@ header {
     grid-row-gap: 2rem;
     @include media-breakpoint-down(md) {
       grid-template-columns: repeat(4, 1fr);
-      grid-column-gap: 1rem;
+      // grid-column-gap: 1rem;
+    }
+    @include media-breakpoint-down(sm) {
+      grid-template-columns: repeat(3, 1fr);
     }
     li {
       text-align: center;
@@ -454,15 +540,17 @@ header {
 }
 
 #supporters {
-  padding: 0 0 10rem 0;
-  background-color: $black;
+  margin-bottom: 10rem;
   .logo-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
     @include media-breakpoint-down(md) {
-      grid-column-gap: 0.5rem;
+      // grid-column-gap: 0.5rem;
+    }
+    @include media-breakpoint-down(sm) {
+      grid-template-columns: repeat(2, 1fr);
     }
     li {
       text-align: center;
@@ -493,18 +581,22 @@ footer {
   }
   .footer-nav a {
     color: $gray;
-    padding: 0.25rem 0;
+    padding: 0.35rem 0;
     line-height: 1.25;
     display: block;
     &:hover {
       color: $purple;
     }
   }
+  .footer-nav__item {
+    @include media-breakpoint-down(sm) {
+      width: 50%;
+    }
+  }
   .social-nav {
     a {
       color: $gray;
       display: block;
-      // background: gray;
       border-radius: 100%;
       width: 46px;
       height: 46px;
@@ -539,4 +631,15 @@ footer {
       }
     }
   }
+}
+
+.effect-fade {
+  opacity: 0;
+  transform: translate(0, 45px);
+  transition: all 500ms;
+}
+
+.effect-fade.effect-scroll {
+  opacity: 1;
+  transform: translate(0, 0);
 }
