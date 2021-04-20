@@ -119,7 +119,7 @@ a {
 
 body {
   background-image: url(../images/shiden/hero-image.jpg);
-  background-size: 2000px;
+  background-size: 2200px;
   background-repeat: no-repeat;
   background-position: top center;
   font-weight: 300;
@@ -129,6 +129,9 @@ header {
   .shiden-logo {
     width: 214px;
     height: 58px;
+    & + span {
+      text-indent: -9999px;
+    }
   }
   .nav-item .nav-link {
     color: $white;
@@ -254,6 +257,7 @@ header {
 }
 
 #deploy {
+  margin-bottom: 10rem;
   min-height: 100vh;
   background: url(../images/shiden/deploy-flow-image.jpg) no-repeat center
     center;
@@ -302,6 +306,7 @@ header {
 }
 
 #join {
+  margin-bottom: 10rem;
   .container {
     background-color: #130826;
     border-radius: 0.25rem;
@@ -375,7 +380,7 @@ header {
 }
 
 #backers {
-  padding: 10rem 0;
+  padding: 0 0 10rem 0;
   .logo-list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -460,13 +465,13 @@ footer {
       }
       span {
         position: absolute;
-        top: -40px;
+        bottom: -40px;
         left: 0;
         right: 0;
         text-align: center;
         white-space: nowrap;
-        display: none;
-        font-size: 0.937rem;
+        opacity: 0;
+        font-size: 0.875rem;
       }
       &:hover {
         background: linear-gradient(
@@ -476,7 +481,7 @@ footer {
           #1297c0 100%
         );
         span {
-          display: block;
+          opacity: 1;
         }
       }
     }
