@@ -117,8 +117,14 @@ a {
   }
 }
 
-body {
+.no-webp body {
   background-image: url(../images/shiden/hero-image.jpg);
+}
+.webp body {
+  background-image: url(../images/shiden/hero-image.webp);
+}
+
+body {
   background-size: 2200px;
   background-repeat: no-repeat;
   background-position: top center;
@@ -185,9 +191,17 @@ header {
   }
 }
 
+.no-webp #multichain {
+  background-image: url(../images/shiden/platform-image.jpg);
+}
+.webp #multichain {
+  background-image: url(../images/shiden/platform-image.webp);
+}
+
 #multichain {
   min-height: 100vh;
-  background: url(../images/shiden/platform-image.jpg) no-repeat bottom center;
+  background-repeat: no-repeat;
+  background-position: bottom center;
   background-size: 1700px;
   padding: 100px 0 230px 0;
   h2 {
@@ -256,11 +270,18 @@ header {
   }
 }
 
+.no-webp #multichain {
+  background-image: url(../images/shiden/deploy-flow-image.jpg);
+}
+.webp #multichain {
+  background-image: url(../images/shiden/deploy-flow-image.webp);
+}
+
 #deploy {
   margin-bottom: 10rem;
   min-height: 100vh;
-  background: url(../images/shiden/deploy-flow-image.jpg) no-repeat center
-    center;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   .deploy-flow {
     display: grid;

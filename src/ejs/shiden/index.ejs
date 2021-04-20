@@ -19,7 +19,7 @@
             <link href="../css/shiden.css" rel="stylesheet">
 
             <!-- Web Font -->
-            <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" class="webfont">
 
             <title>
               <%= title %> - <%= tagline %>
@@ -508,6 +508,15 @@
                 </div>
               </footer>
 
+              <script>
+                // Lazy load web font
+                var webfonts = document.querySelectorAll(".webfont");
+                webfonts.forEach(function (webfont) {
+                  webfont.rel = "stylesheet";
+                });
+              </script>
+
+              <script src="../js/modernizr-webp.js"></script>
           </body>
 
 </html>
