@@ -118,7 +118,7 @@ a {
 }
 
 body {
-  background-image: url(/images/shiden/hero-image.jpg);
+  background-image: url(../images/shiden/hero-image.jpg);
   background-size: 2000px;
   background-repeat: no-repeat;
   background-position: top center;
@@ -184,7 +184,7 @@ header {
 
 #multichain {
   min-height: 100vh;
-  background: url(/images/shiden/platform-image.jpg) no-repeat bottom center;
+  background: url(../images/shiden/platform-image.jpg) no-repeat bottom center;
   background-size: 1700px;
   padding: 100px 0 230px 0;
   h2 {
@@ -255,7 +255,8 @@ header {
 
 #deploy {
   min-height: 100vh;
-  background: url(/images/shiden/deploy-flow-image.jpg) no-repeat center center;
+  background: url(../images/shiden/deploy-flow-image.jpg) no-repeat center
+    center;
   background-size: cover;
   .deploy-flow {
     display: grid;
