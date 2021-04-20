@@ -1,6 +1,7 @@
 $white: #ffffff;
 $black: #000;
 $purple: #a370ff;
+$brand: #5928b1;
 
 $gray: #e0e0e0;
 
@@ -403,7 +404,7 @@ header {
         margin-bottom: -6rem;
       }
       &::after {
-        background-color: #5928b1;
+        background-color: $brand;
         content: "";
         display: block;
         position: absolute;
@@ -718,8 +719,7 @@ body.is-open {
       right: 0;
       bottom: 0;
       left: 0;
-      // background-color: #5928b1;
-      background-color: rgba(#5928b1, 0.95);
+      background-color: rgba($brand, 0.95);
       .nav-link {
         font-size: 1.75rem;
         padding: 0.5rem 0;
