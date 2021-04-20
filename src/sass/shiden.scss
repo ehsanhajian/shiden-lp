@@ -1,0 +1,460 @@
+$white: #ffffff;
+$black: #000;
+$purple: #a370ff;
+
+$gray: #e0e0e0;
+
+$primary: $purple;
+$secondary: $gray;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+);
+
+$link-color: $primary;
+$text-color: $gray;
+$title-color: $white;
+
+$body-bg: $black;
+$body-color: $gray;
+
+$border-radius: 0.1rem;
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+// @import "../../node_modules/bootstrap/scss/images";
+// @import "../../node_modules/bootstrap/scss/code";
+@import "../../node_modules/bootstrap/scss/grid";
+// @import "../../node_modules/bootstrap/scss/tables";
+// @import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/buttons";
+// @import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/dropdown";
+// @import "../../node_modules/bootstrap/scss/button-group";
+// @import "../../node_modules/bootstrap/scss/input-group";
+// @import "../../node_modules/bootstrap/scss/custom-forms";
+@import "../../node_modules/bootstrap/scss/nav";
+// @import "../../node_modules/bootstrap/scss/navbar";
+// @import "../../node_modules/bootstrap/scss/card";
+// @import "../../node_modules/bootstrap/scss/breadcrumb";
+// @import "../../node_modules/bootstrap/scss/pagination";
+// @import "../../node_modules/bootstrap/scss/badge";
+// @import "../../node_modules/bootstrap/scss/jumbotron";
+// @import "../../node_modules/bootstrap/scss/alert";
+// @import "../../node_modules/bootstrap/scss/progress";
+// @import "../../node_modules/bootstrap/scss/media";
+// @import "../../node_modules/bootstrap/scss/list-group";
+// @import "../../node_modules/bootstrap/scss/close";
+// @import "../../node_modules/bootstrap/scss/toasts";
+// @import "../../node_modules/bootstrap/scss/modal";
+// @import "../../node_modules/bootstrap/scss/tooltip";
+// @import "../../node_modules/bootstrap/scss/popover";
+// @import "../../node_modules/bootstrap/scss/carousel";
+// @import "../../node_modules/bootstrap/scss/spinners";
+@import "../../node_modules/bootstrap/scss/utilities";
+// @import "../../node_modules/bootstrap/scss/print";
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+.container-md {
+  max-width: 720px;
+}
+.container-lg {
+  max-width: 960px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  color: $white;
+}
+
+h1 {
+  font-size: 4.25rem;
+  line-height: 1;
+}
+h2 {
+  font-size: 3.5rem;
+}
+h3 {
+  font-size: 2.25rem;
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+}
+
+a {
+  color: $purple;
+  &:hover {
+    color: lighten($purple, 10%);
+  }
+}
+
+.btn-gradiant {
+  background: linear-gradient(90deg, #a12bbe 0%, #5928b1 50%, #1297c0 100%);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+  border: 0;
+  border-radius: 0.1rem;
+  &:hover {
+    filter: brightness(1.2);
+  }
+}
+
+body {
+  background-image: url(/images/shiden/hero-image.jpg);
+  background-size: 2000px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  font-weight: 300;
+}
+
+header {
+  .shiden-logo {
+    width: 214px;
+    height: 58px;
+  }
+  .nav-item .nav-link {
+    color: $white;
+    &:hover {
+      text-decoration: underline;
+      color: $purple;
+    }
+  }
+  .dropdown {
+    .dropdown-toggle {
+      color: $white;
+    }
+    .dropdown-menu {
+      border-radius: 0.15rem;
+      background-color: rgba(#fff, 0.15);
+      .dropdown-item {
+        color: $white;
+        font-weight: 300;
+        &:hover {
+          background-color: rgba(#fff, 0.1);
+        }
+      }
+    }
+    &:hover {
+      .dropdown-toggle {
+        color: $purple;
+      }
+      .dropdown-menu {
+        display: block;
+      }
+    }
+  }
+}
+
+#hero {
+  min-height: calc(100vh - 90px);
+  .hero-inner {
+    width: 60%;
+    @include media-breakpoint-down(lg) {
+      width: 70%;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+  p {
+    font-size: 1.125rem;
+  }
+  .btn-gradiant {
+    padding: 0.75rem 3rem;
+  }
+}
+
+#multichain {
+  min-height: 100vh;
+  background: url(/images/shiden/platform-image.jpg) no-repeat bottom center;
+  background-size: 1700px;
+  padding: 100px 0 230px 0;
+  h2 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+  .multichain-logo-list {
+    li {
+      text-align: center;
+      img {
+        max-width: 150px;
+        max-height: 80px;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      &.and-more {
+        font-family: serif;
+      }
+    }
+  }
+}
+
+#unique {
+  margin: 150px 0;
+  h3 {
+    &::after {
+      content: "";
+      display: block;
+      width: 150px;
+      height: 1px;
+      background: linear-gradient(to right, #a12bbe, #5928b1, #1297c0);
+      margin-top: 0.75rem;
+    }
+  }
+  p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+  .unique-item {
+    max-width: 1440px;
+    margin: auto;
+  }
+  .unique-item__image {
+    img {
+      width: 100%;
+      max-width: 614px;
+    }
+  }
+  .unique-item__text {
+    max-width: 600px;
+  }
+  .unique-item--multichain {
+    padding-right: 5rem;
+  }
+  .unique-item--basic-income {
+    margin-top: -100px;
+    padding-left: 5rem;
+  }
+  .unique-item--multi-virtual-machine {
+    margin-top: -100px;
+    padding-right: 5rem;
+  }
+}
+
+#deploy {
+  min-height: 100vh;
+  background: url(/images/shiden/deploy-flow-image.jpg) no-repeat center center;
+  background-size: cover;
+  .deploy-flow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    counter-reset: item;
+    li {
+      background-color: rgba(#fff, 0.1);
+      border-radius: 0.25rem;
+      padding: 1.5rem;
+      &::before {
+        font-family: "Monoton", cursive;
+        counter-increment: item;
+        content: counter(item);
+        font-size: 3.25rem;
+        background: -webkit-linear-gradient(
+          -45deg,
+          #c94de8 0%,
+          #703ccc 50%,
+          #2db8e2 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      &:nth-child(2) {
+        margin-top: 2rem;
+        margin-bottom: -2rem;
+      }
+      &:nth-child(3) {
+        margin-top: 4rem;
+        margin-bottom: -4rem;
+      }
+      &:nth-child(4) {
+        margin-top: 6rem;
+        margin-bottom: -6rem;
+      }
+      h3 {
+        font-size: 1.375rem;
+      }
+    }
+  }
+}
+
+#join {
+  .container {
+    background-color: #130826;
+    border-radius: 0.25rem;
+    padding: 4rem;
+  }
+  .shiden-logo-mark {
+    width: 132px;
+    height: 166px;
+  }
+  .join-text {
+    max-width: 350px;
+    h2 {
+      line-height: 1;
+    }
+  }
+  .join-flow {
+    counter-reset: item;
+    position: relative;
+    &::before {
+      background-color: #623dc0;
+      content: "";
+      display: block;
+      z-index: 1;
+      position: absolute;
+      left: 31px;
+      top: 0;
+      display: block;
+      height: calc(100% - 62px);
+      width: 1px;
+    }
+    li {
+      font-size: 1.375rem;
+      position: relative;
+      padding: 18px 0 0 80px;
+      min-height: 64px;
+      &::before {
+        counter-increment: item;
+        content: counter(item);
+        font-size: 1.75rem;
+        position: absolute;
+        left: 1px;
+        top: 1px;
+        z-index: 3;
+        background-color: #130826;
+        border-radius: 100%;
+        display: block;
+        width: 62px;
+        height: 62px;
+        text-align: center;
+        line-height: 62px;
+      }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: linear-gradient(135deg, #a12bbe, #5928b1, #1297c0);
+        z-index: 2;
+        width: 64px;
+        height: 64px;
+        border-radius: 100%;
+      }
+    }
+  }
+  .follow-us-icon {
+    span {
+      font-size: 1rem;
+    }
+  }
+}
+
+#backers {
+  padding: 10rem 0;
+  .backers-logo-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    @include media-breakpoint-down(md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    li {
+      text-align: center;
+      img {
+        max-width: 200px;
+        max-height: 70px;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+footer {
+  background: linear-gradient(to right, #a12bbe, #5928b1, #1297c0);
+  padding-top: 1px;
+  .footer-inner {
+    background-color: $black;
+  }
+  .copyright {
+    font-size: 0.75rem;
+    color: $gray;
+  }
+  .shiden-logo-mark {
+    width: 32px;
+    height: 41px;
+  }
+  .footer-nav a {
+    color: $gray;
+    padding: 0.25rem 0;
+    line-height: 1.25;
+    display: block;
+    &:hover {
+      color: $purple;
+    }
+  }
+  .social-nav {
+    a {
+      color: $gray;
+      display: block;
+      // background: gray;
+      border-radius: 100%;
+      width: 46px;
+      height: 46px;
+      text-align: center;
+      line-height: 46px;
+      position: relative;
+      svg {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+      span {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        white-space: nowrap;
+        display: none;
+        font-size: 0.937rem;
+      }
+      &:hover {
+        background: linear-gradient(
+          135deg,
+          #a12bbe 0%,
+          #5928b1 50%,
+          #1297c0 100%
+        );
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}

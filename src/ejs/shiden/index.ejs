@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+
+<% const title="Shiden Network" %>
+  <% const tagline="Multi Chain dApps Hub on Kusama" %>
+    <% const url="Multi Chain dApps Hub on Kusama" %>
+      <% const
+        description="Shiden Network is a multichain decentralized applications hub on Kusama Network. Shiden supports Ethereum Virtual Machine, WebAssembly, and Layer2 solutions from day1. The smart contract platform supports various applications like DeFi, NFT, and more."
+        %>
+        <% const image="/images/shiden/card-image.jpg" %>
+
+          <head>
+            <!-- Required meta tags -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="robots" content="index, follow">
+
+            <!-- Bootstrap CSS -->
+            <link href="/css/shiden.css" rel="stylesheet">
+
+            <!-- Web Font -->
+            <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+
+            <title>
+              <%= title %> - <%= tagline %>
+            </title>
+            <meta name="description" content="<%= description %>">
+
+            <!-- Open Graph Tags -->
+            <meta property="og:title" content="<%= title %> - <%= tagline %>" />
+            <meta property="og:type" content="website" />
+            <meta property="og:image" content="<%= image %>" />
+            <meta property="og:description" content="<%= description %>" />
+            <meta property="og:locale" content="en-US" />
+            <meta property="og:site_name" content="<%= title %>" />
+            <meta property="og:url" content="<%= url %>" />
+
+            <!-- Twitter Cards -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name=”twitter:site” content=”@shidennetwork>
+            <meta name="twitter:title" content="<%= title %> - <%= tagline %>">
+            <meta name="twitter:description" content="<%= description %>">
+            <meta name="twitter:image" content="<%= image %>">
+            <meta property="twitter:url" content="<%= url %>" />
+            <meta name=”twitter:creator” content=”@shidennetwork>
+          </head>
+
+          <body>
+            <%- include('_svg-defs'); %>
+
+              <header class="container">
+
+                <div class="d-flex flex-wrap justify-content-between py-3">
+                  <a href="/shiden/"
+                    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                    <svg class="shiden-logo" viewBox="0 0 214 58">
+                      <use xlink:href="#shiden-logo-mark" />
+                      <use xlink:href="#shiden-logo-type" />
+                    </svg>
+                  </a>
+
+                  <ul class="nav d-none d-md-flex">
+                    <li class="nav-item"><a href="/" class="nav-link">Plasm Network</a></li>
+                    <li class="nav-item"><a href="https://docs.plasmnet.io/" target="_blank" class="nav-link">Docs</a>
+                    </li>
+                    <li class="nav-item">
+                      <div class="dropdown nav-link">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Community
+                        </a>
+                        <ul class="dropdown-menu m-0" aria-labelledby="dropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Twitter</a></li>
+                          <li><a class="dropdown-item" href="#">Discord</a></li>
+                          <li><a class="dropdown-item" href="#">Telegram</a></li>
+                          <li><a class="dropdown-item" href="#">Medium</a></li>
+                          <li><a class="dropdown-item" href="#">Whitepaper</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="btn btn-gradiant">
+                        Go to App
+                        <svg class="icon">
+                          <use xlink:href="#icon-arrow-top-right"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </header>
+
+              <section id="hero" class="d-flex align-items-center">
+                <div class="container">
+                  <div class="hero-inner">
+                    <h1>Multi Chain dApps Hub on Kusama</h1>
+                    <p class="my-5">Smart Contract Platform Natively Supporting Ethereum Virtual Machine and
+                      WebAssembly
+                    </p>
+                    <a href="#" class="btn btn-gradiant btn-lg">
+                      Use App
+                      <svg class="icon">
+                        <use xlink:href="#icon-arrow-top-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </section>
+
+              <section id="multichain">
+                <div>
+                  <h2 class="container-lg text-center mb-4">Building multichain smart contract platform on Kusama
+                    Network
+                  </h2>
+                  <p class="container-md text-center mb-5">Shiden Network is a multichain decentralized applications
+                    hub
+                    on
+                    Kusama
+                    Network. Shiden supports Ethereum Virtual Machine, WebAssembly, and Layer2 solutions from day1.
+                    The
+                    smart
+                    contract platform supports various applications like DeFi, NFT, and more.</p>
+                  <ul class="multichain-logo-list d-flex flex-wrap justify-content-center align-items-center">
+                    <li>
+                      <picture>
+                        <img src="/images/shiden/logo-kusama.png" alt="">
+                      </picture>
+                    </li>
+                    <li>
+                      <picture>
+                        <img src="/images/shiden/logo-eth.png" alt="">
+                      </picture>
+                    </li>
+                    <li>
+                      <picture>
+                        <img src="/images/shiden/logo-cosmos.png" alt="">
+                      </picture>
+                    </li>
+                    <li>
+                      <picture>
+                        <img src="/images/shiden/logo-secretnetwork.png" alt="">
+                      </picture>
+                    </li>
+                    <li class="font-italic and-more">and more...</li>
+                  </ul>
+                </div>
+              </section>
+
+              <section id="unique">
+                <div>
+                  <h2 class="container text-center">What Makes Shiden Unique?</h2>
+
+                  <div class="unique-item unique-item--multichain d-flex align-items-center">
+                    <div class="unique-item__image">
+                      <picture>
+                        <img src="/images/shiden/multichain-image.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="unique-item__text">
+                      <h3 class="mb-3">Multichain</h3>
+                      <p>Building bridges to various blockchains. (Ethereum, Secret Network, Cosmos and so on)</p>
+                    </div>
+                  </div>
+
+                  <div class="unique-item unique-item--basic-income d-flex align-items-center justify-content-end">
+                    <div class="unique-item__image order-2">
+                      <picture>
+                        <img src="/images/shiden/basic-income-image.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="unique-item__text order-1">
+                      <h3 class="mb-3">Basic Income for Developers</h3>
+                      <p>SDN token holders can stake their tokens on favorite dApps so that both nominators and the
+                        dApps developer can earn SDN tokens.</p>
+                    </div>
+                  </div>
+
+                  <div class="unique-item unique-item--multi-virtual-machine d-flex align-items-center">
+                    <div class="unique-item__image">
+                      <picture>
+                        <img src="/images/shiden/multi-virtual-machine-image.jpg" alt="">
+                      </picture>
+                    </div>
+                    <div class="unique-item__text">
+                      <h3 class="mb-3">Multi Virtual Machine</h3>
+                      <p>Shiden natively supports both EVM and WASM. Ethereum compatibility is just a day1 for Kusama
+                        Parachains.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </section>
+
+              <section id="deploy">
+                <div class="container">
+                  <h2 class="text-center mb-5">How to Deploy dApps?</h2>
+                  <ol class="deploy-flow">
+                    <li>
+                      <h3 class="mb-4">
+                        <a href="https://docs.plasmnet.io/" target="_blank">
+                          Visit our doc
+                          <svg class="icon">
+                            <use xlink:href="#icon-arrow-top-right"></use>
+                          </svg>
+                        </a>
+                      </h3>
+                      <p>Learn how Shiden Network works and how to deploy smart contracts.</p>
+                    </li>
+                    <li>
+                      <h3 class="mb-4">Use EVM or WASM</h3>
+                      <p>Shiden Netwok supports both EVM and WASM. Choose a virtual machine that is suitable for your
+                        team
+                        and
+                        your
+                        use case.</p>
+                    </li>
+                    <li>
+                      <h3 class="mb-4">Compile the contract and deploy on Dusty</h3>
+                      <p>Currently, you have 2 ways to compile, using Ethereum tool or using Solang, Solidity to WASM
+                        compiler.
+                        After compiling the contract, let's deploy on the testnet first. </p>
+                    </li>
+                    <li>
+                      <h3 class="mb-4">Deploy on Shiden</h3>
+                      <p>After successful deployment on Dusty, let's deploy contracts on Shiden.</p>
+                    </li>
+                  </ol>
+                </div>
+              </section>
+
+              <section id="join">
+                <div class="container d-flex">
+                  <div class="join-text mr-5">
+                    <div class="text-center mb-4">
+                      <svg class="shiden-logo-mark" viewBox="0 0 46 58">
+                        <use xlink:href="#shiden-logo-mark" />
+                      </svg>
+                    </div>
+                    <h2 class="mb-4">Join Shiden Network</h2>
+                    <p>During a Kusama Parachai auction, we conduct a crowdloan campaign. KSM token holders can stake
+                      KSM
+                      tokens
+                      so
+                      that they can earn SDN tokens as a reward.</p>
+                  </div>
+                  <ol class="join-flow">
+                    <li class="mb-3">Learn how the auction and crowdloan work</li>
+                    <li class="mb-3">Unbond KSM tokens</li>
+                    <li class="mb-3">Go to Polkadot.js or centralized exchanges that support Kusama Auction</li>
+                    <li class="mb-3">Join our active crowdloan or auction</li>
+                    <li>
+                      Follow us<br>
+                      <a href="#" class="follow-us-icon">
+                        <svg class="icon">
+                          <use xlink:href="#icon-twitter"></use>
+                        </svg>
+                        <span>Twitter</span>
+                      </a>
+                      <a href="#" class="follow-us-icon ml-2">
+                        <svg class="icon">
+                          <use xlink:href="#icon-discord"></use>
+                        </svg>
+                        <span>Discord</span>
+                      </a>
+                      <a href="#" class="follow-us-icon ml-2">
+                        <svg class="icon">
+                          <use xlink:href="#icon-telegram"></use>
+                        </svg>
+                        <span>Telegram</span>
+                      </a>
+                    </li>
+                  </ol>
+                </div>
+              </section>
+
+              <section id="backers">
+                <div class="container">
+                  <h2 class="text-center mb-5">Backers</h2>
+                  <ul class="backers-logo-list">
+                    <li>
+                      <picture>
+                        <img src="/images/shiden/logo-binance.png" alt="">
+                      </picture>
+                    </li>
+                    <li>
+                      <picture>
+                        <img src="/images/shiden/logo-hypersphere.png" alt="">
+                      </picture>
+                    </li>
+                    <li>
+                      <picture>
+                        <img src="/images/shiden/logo-fenbushi.png" alt="">
+                      </picture>
+                    </li>
+                    <li>
+                      <picture>
+                        <img src="/images/shiden/logo-hashkey.png" alt="">
+                      </picture>
+                    </li>
+                    <li>
+                      <picture>
+                        <img src="/images/shiden/logo-dfg.png" alt="">
+                      </picture>
+                    </li>
+                    <li>
+                      <picture>
+                        <img src="/images/shiden/logo-longhash.png" alt="">
+                      </picture>
+                    </li>
+                    <li>
+                      <picture>
+                        <img src="/images/shiden/logo-blockdreamfund.png" alt="">
+                      </picture>
+                    </li>
+                    <li>
+                      <picture>
+                        <img src="/images/shiden/logo-gumicryptos.png" alt="">
+                      </picture>
+                    </li>
+                    <li>
+                      <picture>
+                        <img src="/images/shiden/logo-polkaworld.png" alt="">
+                      </picture>
+                    </li>
+                    <li>
+                      <picture>
+                        <img src="/images/shiden/logo-digitalstrategies.png" alt="">
+                      </picture>
+                    </li>
+                    <li>
+                      <picture>
+                        <img src="/images/shiden/logo-altonomy.png" alt="">
+                      </picture>
+                    </li>
+                    <li>
+                      <picture>
+                        <img src="/images/shiden/logo-au21capital.png" alt="">
+                      </picture>
+                    </li>
+                    <li>
+                      <picture>
+                        <img src="/images/shiden/logo-trgcapital.png" alt="">
+                      </picture>
+                    </li>
+                    <li>
+                      <picture>
+                        <img src="/images/shiden/logo-snz.png" alt="">
+                      </picture>
+                    </li>
+                    <li>
+                      <picture>
+                        <img src="/images/shiden/logo-iosgventres.png" alt="">
+                      </picture>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+
+              <footer>
+                <div class="footer-inner">
+                  <div class="container pt-5 pb-3">
+
+                    <nav class="d-flex justify-content-between mb-4">
+                      <ul class="d-flex footer-nav">
+                        <li class="mr-4">
+                          <p class="font-weight-bold">General</p>
+                          <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                          </ul>
+                        </li>
+                        <li class="mr-4">
+                          <p class="font-weight-bold">Repositories</p>
+                          <ul>
+                            <li><a href="#">Plasm</a></li>
+                            <li><a href="#">Plasm Portal Sites</a></li>
+                            <li><a href="#">Plasm Lockdrop</a></li>
+                            <li><a href="#">Plasm Documentations</a></li>
+                            <li><a href="#">Plasm Homepage</a></li>
+                          </ul>
+                        </li>
+                        <li class="mr-4">
+                          <p class="font-weight-bold">Community</p>
+                          <ul>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Discord</a></li>
+                            <li><a href="#">Telegram</a></li>
+                            <li><a href="#">Medium</a></li>
+                            <li><a href="#">Whitepaper</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p class="font-weight-bold">Collaboration</p>
+                          <ul>
+                            <li><a href="#">Substrate Builders Program</a></li>
+                            <li><a href="#">Web3 foundation Grants Program</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <ul class="d-flex social-nav">
+                        <li>
+                          <a href="#">
+                            <svg class="icon">
+                              <use xlink:href="#icon-twitter"></use>
+                            </svg>
+                            <span>Twitter</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <svg class="icon">
+                              <use xlink:href="#icon-discord"></use>
+                            </svg>
+                            <span>Discord</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <svg class="icon">
+                              <use xlink:href="#icon-telegram"></use>
+                            </svg>
+                            <span>Telegram</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <svg class="icon">
+                              <use xlink:href="#icon-medium"></use>
+                            </svg>
+                            <span>Medium</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <svg class="icon">
+                              <use xlink:href="#icon-github"></use>
+                            </svg>
+                            <span>Github</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+
+                    <p class="copyright">
+                      <svg class="shiden-logo-mark" viewBox="0 0 46 58">
+                        <use xlink:href="#shiden-logo-mark" />
+                      </svg>
+                      © 2021 Shiden Network. All Rights Reserved.
+                    </p>
+                  </div>
+                </div>
+              </footer>
+
+          </body>
+
+</html>
