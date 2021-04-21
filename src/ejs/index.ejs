@@ -1,27 +1,634 @@
 <!doctype html>
 <html lang="en">
 
-<% const title="Plasm Network" %>
-  <% const tagline="A scaling dApps platform on Substrate" %>
-    <% const url="https://www.plasmnet.io/" %>
-      <% const description="Faster, Cheaper, and Interoperable Ethereum Compatible Smart Contract Platform on Polkadot"
+<% const title="Shiden Network" %>
+  <% const tagline="Multi Chain dApps Hub on Kusama" %>
+    <% const url="https://shiden.plasmnet.io" %>
+      <% const
+        description="Shiden Network is a multi-chain decentralized application layer on Kusama Network. Kusama Relaychain does not support smart contract functionality by design - Kusama Network needs a smart contract layer. This is where Shiden Network comes in. Shiden supports Ethereum Virtual Machine, WebAssembly, and Layer2 solutions from day one. The platform supports various applications like DeFi, NFTs and more."
         %>
+        <% const image="https://shiden.plasmnet.io/images/card-image.jpg" %>
 
-        <head>
-          <!-- Required meta tags -->
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <meta name="robots" content="index, follow">
+          <head>
+            <!-- Required meta tags -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="robots" content="index, follow">
 
-          <title>
-            <%= title %> - <%= tagline %>
-          </title>
-          <meta name="description" content="<%= description %>">
-        </head>
+            <!-- Bootstrapped CSS -->
+            <link href="css/shiden.css" rel="stylesheet">
 
-        <body>
-          <h1>Plasm Network</h1>
-          <p><a href="shiden/">Go to Shiden Network →</a></p>
-        </body>
+            <!-- Web Font -->
+            <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" class="webfont">
+
+            <title>
+              <%= title %> - <%= tagline %>
+            </title>
+            <meta name="description" content="<%= description %>">
+
+            <!-- Open Graph Tags -->
+            <meta property="og:title" content="<%= title %> - <%= tagline %>" />
+            <meta property="og:type" content="website" />
+            <meta property="og:image" content="<%= image %>" />
+            <meta property="og:description" content="<%= description %>" />
+            <meta property="og:locale" content="en-US" />
+            <meta property="og:site_name" content="<%= title %>" />
+            <meta property="og:url" content="<%= url %>" />
+
+            <!-- Twitter Cards -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name=”twitter:site” content=”@shidennetwork>
+            <meta name="twitter:title" content="<%= title %> - <%= tagline %>">
+            <meta name="twitter:description" content="<%= description %>">
+            <meta name="twitter:image" content="<%= image %>">
+            <meta property="twitter:url" content="<%= url %>" />
+            <meta name=”twitter:creator” content=”@shidennetwork>
+
+            <!-- Favicon -->
+            <link rel="apple-touch-icon" sizes="180x180" href="images/shiden/favicon/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="images/shiden/favicon/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="images/shiden/favicon/favicon-16x16.png">
+            <link rel="manifest" href="images/shiden/favicon/site.webmanifest">
+            <link rel="mask-icon" href="images/shiden/favicon/safari-pinned-tab.svg" color="#5928b1">
+            <meta name="msapplication-TileColor" content="#000000">
+            <meta name="theme-color" content="#000000">
+          </head>
+
+          <body>
+            <%- include('_svg-defs'); %>
+
+              <header class="container">
+
+                <div class="d-flex flex-wrap justify-content-between align-items-center py-3">
+
+                  <div class="d-flex align-items-center">
+                    <svg class="shiden-logo" viewBox="0 0 214 58">
+                      <use xlink:href="#shiden-logo-mark" />
+                      <use xlink:href="#shiden-logo-type" />
+                    </svg>
+                    <span>
+                      <%= title %>
+                    </span>
+                  </div>
+
+                  <ul class="nav d-none d-lg-flex">
+                    <li class="nav-item"><a href="https://plasmnet.io/" class="nav-link">Plasm Network</a></li>
+                    <li class="nav-item"><a href="https://docs.plasmnet.io/" target="_blank" rel="noopener noreferrer"
+                        class="nav-link">Docs</a>
+                    </li>
+                    <li class="nav-item">
+                      <div class="dropdown nav-link">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Community
+                        </a>
+                        <ul class="dropdown-menu m-0" aria-labelledby="dropdownMenuLink">
+                          <li><a class="dropdown-item" href="https://twitter.com/Plasm_Network" target="_blank"
+                              rel="noopener noreferrer">Twitter</a></li>
+                          <li><a class="dropdown-item" href="https://discord.gg/Z3nC9U4" target="_blank"
+                              rel="noopener noreferrer">Discord</a>
+                          </li>
+                          <li><a class="dropdown-item" href="https://t.me/PlasmOfficial" target="_blank"
+                              rel="noopener noreferrer">Telegram</a></li>
+                          <li><a class="dropdown-item" href="https://medium.com/plasm-network" target="_blank"
+                              rel="noopener noreferrer">Medium</a>
+                          </li>
+                          <li><a class="dropdown-item"
+                              href="https://github.com/PlasmNetwork/plasmdocs/blob/master/wp/en.pdf" target="_blank"
+                              rel="noopener noreferrer">Whitepaper</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.dusty.plasmnet.io%2F#/explorer"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-gradiant">
+                        Go to App
+                        <svg class="icon">
+                          <use xlink:href="#icon-arrow-top-right"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <div class="d-lg-none mr-2">
+                    <button class="hamburger-button">
+                      <span>Nav Button</span>
+                    </button>
+                    <div class="nav-mobile">
+                      <div class="nav-mobile__inner d-flex align-items-center justify-content-center">
+                        <ul>
+                          <li class="nav-item"><a href="https://plasmnet.io/" class="nav-link">Plasm Network</a></li>
+                          <li class="nav-item"><a href="https://docs.plasmnet.io/" target="_blank"
+                              rel="noopener noreferrer" class="nav-link">Docs</a>
+                          </li>
+                          <li class="nav-item">
+                            <p class="nav-link m-0">Community</p>
+                            <ul class="ml-3 mb-4 community">
+                              <li class="nav-item"><a href="https://twitter.com/Plasm_Network" target="_blank"
+                                  rel="noopener noreferrer" class="nav-link">Twitter</a></li>
+                              <li class="nav-item"><a href="https://discord.gg/Z3nC9U4" target="_blank"
+                                  rel="noopener noreferrer" class="nav-link">Discord</a>
+                              </li>
+                              <li class="nav-item"><a href="https://t.me/PlasmOfficial" target="_blank"
+                                  rel="noopener noreferrer" class="nav-link">Telegram</a></li>
+                              <li class="nav-item"><a href="https://medium.com/plasm-network" target="_blank"
+                                  rel="noopener noreferrer" class="nav-link">Medium</a>
+                              </li>
+                              <li class="nav-item"><a
+                                  href="https://github.com/PlasmNetwork/plasmdocs/blob/master/wp/en.pdf" target="_blank"
+                                  rel="noopener noreferrer" class="nav-link">Whitepaper</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="nav-item">
+                            <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.dusty.plasmnet.io%2F#/explorer"
+                              target="_blank" rel="noopener noreferrer" class="btn btn-lg btn-light px-5">
+                              Go to App
+                              <svg class="icon">
+                                <use xlink:href="#icon-arrow-top-right"></use>
+                              </svg>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </header>
+
+              <section id="hero" class="d-flex align-items-center">
+                <div class="container">
+                  <div class="hero-inner">
+                    <h1>Multi Chain dApps Hub on Kusama</h1>
+                    <p class="my-4 my-md-5">Smart Contract Platform Natively Supporting Ethereum Virtual Machine and
+                      WebAssembly
+                    </p>
+                    <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.dusty.plasmnet.io%2F#/explorer"
+                      target="_blank" rel="noopener noreferrer" class="btn btn-gradiant btn-lg">
+                      Use App
+                      <svg class="icon">
+                        <use xlink:href="#icon-arrow-top-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </section>
+
+              <section id="multichain">
+                <div class="multichain-inner d-flex align-items-center">
+                  <div class="container-lg">
+                    <h2 class="text-center mb-4">Building the premier multi-chain smart contract platform
+                      on
+                      Kusama Network
+                    </h2>
+                    <p class="container-md text-md-center mb-5">Shiden Network is a multi-chain decentralized
+                      application
+                      layer on Kusama Network. Kusama Relaychain does not support smart contract functionality by design
+                      -
+                      Kusama Network needs a smart contract layer. This is where Shiden Network comes in. Shiden
+                      supports
+                      Ethereum Virtual Machine, WebAssembly, and Layer2 solutions from day one. The platform supports
+                      various applications like DeFi, NFTs and more.</p>
+                    <ul class="multichain-logo-list d-flex flex-wrap justify-content-center align-items-center">
+                      <li>
+                        <a href="https://kusama.network/" target="_blank" rel="noopener noreferrer">
+                          <img src="images/shiden/logo-kusama.png" alt="Kusama Network" loading=lazy>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://ethereum.org/" target="_blank" rel="noopener noreferrer">
+                          <img src="images/shiden/logo-eth.png" alt="Ethereum" loading=lazy>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://cosmos.network/" target="_blank" rel="noopener noreferrer">
+                          <img src="images/shiden/logo-cosmos.png" alt="Cosmos" loading=lazy>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://scrt.network/" target="_blank" rel="noopener noreferrer">
+                          <img src="images/shiden/logo-secretnetwork.png" alt="Secret Network" loading=lazy>
+                        </a>
+                      </li>
+                      <li class="font-italic and-more">and more...</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <section id="unique">
+                <div>
+                  <h2 class="container text-center">What Makes Shiden Unique?</h2>
+
+                  <div class="unique-item unique-item--multichain d-md-flex align-items-center">
+                    <div class="unique-item__image effect-fade">
+                      <picture>
+                        <source srcset="images/shiden/multichain-image.webp" type="image/webp">
+                        <img src="images/shiden/multichain-image.jpg" alt="Multi Chain" loading=lazy>
+                      </picture>
+                    </div>
+                    <div class="unique-item__text">
+                      <h3 class="mb-3">Multi Chain</h3>
+                      <p>Building bridges to various blockchains. (Ethereum, Secret Network, Cosmos and so on)</p>
+                    </div>
+                  </div>
+
+                  <div class="unique-item unique-item--basic-income d-md-flex align-items-center justify-content-end">
+                    <div class="unique-item__image order-2 effect-fade">
+                      <picture>
+                        <source srcset="images/shiden/basic-income-image.webp" type="image/webp">
+                        <img src="images/shiden/basic-income-image.jpg" alt="Basic Income for Developers"
+                          loading=lazy>
+                      </picture>
+                    </div>
+                    <div class="unique-item__text order-1">
+                      <h3 class="mb-3">Basic Income for Developers</h3>
+                      <p>SDN token holders can stake their tokens on favorite dApps so that both nominators and the
+                        dApps developer can earn SDN tokens.</p>
+                    </div>
+                  </div>
+
+                  <div class="unique-item unique-item--multi-virtual-machine d-md-flex align-items-center">
+                    <div class="unique-item__image effect-fade">
+                      <picture>
+                        <source srcset="images/shiden/multi-virtual-machine-image.webp" type="image/webp">
+                        <img src="images/shiden/multi-virtual-machine-image.jpg" alt="Multi Virtual Machine"
+                          loading=lazy>
+                      </picture>
+                    </div>
+                    <div class="unique-item__text">
+                      <h3 class="mb-3">Multi Virtual Machine</h3>
+                      <p>Shiden natively supports both EVM and WASM. Ethereum compatibility is just a day1 for Kusama
+                        Parachains.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </section>
+
+              <section id="deploy">
+                <div class="container">
+                  <h2 class="text-center mb-5">How to Deploy dApps?</h2>
+                  <ol class="deploy-flow">
+                    <li>
+                      <h3 class="mb-4">
+                        <a href="https://docs.plasmnet.io/" target="_blank" rel="noopener noreferrer">
+                          Visit our doc
+                          <svg class="icon">
+                            <use xlink:href="#icon-arrow-top-right"></use>
+                          </svg>
+                        </a>
+                      </h3>
+                      <p>Learn how Shiden Network works and how to deploy smart contracts.</p>
+                    </li>
+                    <li>
+                      <h3 class="mb-4">Use EVM or WASM</h3>
+                      <p>Shiden Netwok supports both EVM and WASM. Choose a virtual machine that is suitable for your
+                        team
+                        and
+                        your
+                        use case.</p>
+                    </li>
+                    <li>
+                      <h3 class="mb-4">Compile the contract and deploy on Dusty</h3>
+                      <p>If you are trying to deploy Solidity smart contracts, you have 2 ways to compile your smart
+                        contract: using Ethereum tools, or using Solang (a Solidity to WASM compiler). After compiling
+                        your contract, you can deploy it on our testnet, Dusty Network.</p>
+                    </li>
+                    <li>
+                      <h3 class="mb-4">Deploy on Shiden</h3>
+                      <p>After successful development on Dusty, you can now deploy your contract on Shiden.</p>
+                    </li>
+                  </ol>
+                </div>
+              </section>
+
+              <section id="join">
+                <div class="container d-md-flex align-items-start">
+                  <div class="join-text mr-md-5">
+                    <div class="text-center mb-4">
+                      <svg class="shiden-logo-mark" viewBox="0 0 46 58">
+                        <use xlink:href="#shiden-logo-mark" />
+                      </svg>
+                    </div>
+                    <h2 class="mb-4">Join Shiden Network</h2>
+                    <p class="mb-5 mb-md-0">During a Kusama Parachai auction, we conduct a crowdloan campaign. KSM token
+                      holders
+                      can stake
+                      KSM
+                      tokens
+                      so
+                      that they can earn SDN tokens as a reward.</p>
+                  </div>
+                  <ol class="join-flow">
+                    <li class="mb-3"><a href="https://kusama.network/auctions" target="_blank"
+                        rel="noopener noreferrer">Learn</a> how the auction and the
+                      crowdloan works</li>
+                    <li class="mb-3">Unbond KSM tokens</li>
+                    <li class="mb-3">Go to <a href="https://polkadot.js.org/apps/#/explorer" target="_blank"
+                        rel="noopener noreferrer">Polkadot.js</a> or
+                      centralized exchanges that support Kusama Auction</li>
+                    <li class="mb-3">Join our active crowdloan or auction</li>
+                    <li>
+                      Follow us<br>
+                      <a href="https://twitter.com/Plasm_Network" target="_blank" rel="noopener noreferrer"
+                        class="follow-us-icon text-nowrap mr-2">
+                        <svg class="icon">
+                          <use xlink:href="#icon-twitter"></use>
+                        </svg>
+                        <span>Twitter</span>
+                      </a>
+                      <a href="https://discord.gg/Z3nC9U4" target="_blank" rel="noopener noreferrer"
+                        class="follow-us-icon text-nowrap mr-2">
+                        <svg class="icon">
+                          <use xlink:href="#icon-discord"></use>
+                        </svg>
+                        <span>Discord</span>
+                      </a>
+                      <a href="https://t.me/PlasmOfficial" target="_blank" rel="noopener noreferrer"
+                        class="follow-us-icon text-nowrap">
+                        <svg class="icon">
+                          <use xlink:href="#icon-telegram"></use>
+                        </svg>
+                        <span>Telegram</span>
+                      </a>
+                    </li>
+                  </ol>
+                </div>
+              </section>
+
+              <section id="backers">
+                <div class="container">
+                  <h2 class="text-center mb-5">Backers</h2>
+                  <ul class="logo-list">
+                    <li>
+                      <a href="https://labs.binance.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/shiden/logo-binance.png" alt="Binance Labs" loading="lazy">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://hypersphere.ventures/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/shiden/logo-hypersphere.png" alt="Hypersphere Ventures" loading="lazy">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.fenbushi.vc/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/shiden/logo-fenbushi.png" alt="Fenbushi Capital" loading="lazy">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.hashkeycap.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/shiden/logo-hashkey.png" alt="Hashkey Capital" loading="lazy">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.dfg.group/investment" target="_blank" rel="noopener noreferrer">
+                        <img src="images/shiden/logo-dfg.png" alt="DFG" loading="lazy">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.longhashventures.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/shiden/logo-longhash.png" alt="LongHash Ventures" loading="lazy">
+                      </a>
+                    </li>
+                    <li>
+                      <img src="images/shiden/logo-blockdreamfund.png" alt="Block Dream Fund" loading="lazy">
+                    </li>
+                    <li>
+                      <a href="https://www.gumi-cryptos.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/shiden/logo-gumicryptos.png" alt="gumi Cryptos" loading="lazy">
+                      </a>
+                    </li>
+                    <!-- <li>
+                      <a href="https://www.polkaworld.org/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/shiden/logo-polkaworld.png" alt="PolkaWorld" loading="lazy">
+                      </a>
+                    </li> -->
+                    <li>
+                      <img src="images/shiden/logo-sub0capital.png" alt="Sub0 Capital" loading="lazy">
+                    </li>
+                    <li>
+                      <img src="images/shiden/logo-digitalstrategies.png" alt="Digital Strategies" loading="lazy">
+                    </li>
+                    <li>
+                      <a href="https://www.altonomy.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/shiden/logo-altonomy.png" alt="Altonomy" loading="lazy">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://au21.capital/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/shiden/logo-au21capital.png" alt="AU21 Capital" loading="lazy">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://trgc.io/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/shiden/logo-trgcapital.png" alt="TRG Capital" loading="lazy">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://snzholding.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/shiden/logo-snz.png" alt="SNZ" loading="lazy">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://iosg.vc/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/shiden/logo-iosgventres.png" alt="IOSG Ventures" loading="lazy">
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+
+              <section id="supporters">
+                <div class="container">
+                  <h2 class="text-center mb-5">Supporters</h2>
+                  <ul class="logo-list">
+                    <li>
+                      <a href="https://startups.microsoft.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/shiden/logo-microsoft.png" alt="Microsoft for Startups" loading="lazy">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.substrate.io/builders-program/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/shiden/logo-substrate.png" alt="Substrate Builders Program" loading="lazy">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://web3.foundation/grants/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/shiden/logo-web3.png" alt="Web3 Foundation Grants Program" loading="lazy">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.xcelerator.berkeley.edu/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/shiden/logo-xcelerator.png" alt="The Berkeley Blockchain Xcelerator"
+                          loading="lazy">
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+
+              <footer>
+                <div class="footer-inner">
+                  <div class="container pt-5 pb-3">
+
+                    <nav class="d-lg-flex justify-content-between mb-4">
+                      <ul class="d-flex flex-wrap footer-nav">
+                        <li class="pr-md-4 pr-lg-5 mb-5 footer-nav__item">
+                          <p class="font-weight-bold">General</p>
+                          <ul>
+                            <li><a href="https://stake.co.jp/en/" target="_blank" rel="noopener noreferrer">About</a>
+                            </li>
+                            <li><a href="https://stake.co.jp/en/contact" target="_blank"
+                                rel="noopener noreferrer">Contact Us</a></li>
+                            <li><a href="https://stake.co.jp/en/career" target="_blank"
+                                rel="noopener noreferrer">Careers</a></li>
+                          </ul>
+                        </li>
+                        <li class="pr-md-4 pr-lg-5 mb-5 footer-nav__item">
+                          <p class="font-weight-bold">Repositories</p>
+                          <ul>
+                            <li><a href="https://github.com/PlasmNetwork/Plasm" target="_blank"
+                                rel="noopener noreferrer">Plasm</a></li>
+                            <li><a href="https://github.com/staketechnologies/apps" target="_blank"
+                                rel="noopener noreferrer">Plasm Portal Sites</a></li>
+                            <li><a href="https://github.com/PlasmNetwork/lockdrop-ui" target="_blank"
+                                rel="noopener noreferrer">Plasm Lockdrop</a></li>
+                            <li><a href="https://plasmnet.io/" target="_blank" rel="noopener noreferrer">Plasm
+                                Documentation</a></li>
+                            <li><a href="https://github.com/PlasmNetwork/plasmnet.io" target="_blank"
+                                rel="noopener noreferrer">Plasm Homepage</a></li>
+                          </ul>
+                        </li>
+                        <li class="pr-md-4 pr-lg-5 mb-5 footer-nav__item">
+                          <p class="font-weight-bold">Community</p>
+                          <ul>
+                            <li><a href="https://twitter.com/Plasm_Network" target="_blank"
+                                rel="noopener noreferrer">Twitter</a></li>
+                            <li><a href="https://discord.gg/Z3nC9U4" target="_blank"
+                                rel="noopener noreferrer">Discord</a></li>
+                            <li><a href="https://t.me/PlasmOfficial" target="_blank"
+                                rel="noopener noreferrer">Telegram</a></li>
+                            <li><a href="https://medium.com/plasm-network" target="_blank"
+                                rel="noopener noreferrer">Medium</a></li>
+                            <li><a href="https://github.com/PlasmNetwork/plasmdocs/blob/master/wp/en.pdf"
+                                target="_blank" rel="noopener noreferrer">Whitepaper</a></li>
+                          </ul>
+                        </li>
+                        <li class="pr-md-4 pr-lg-5 mb-5 footer-nav__item">
+                          <p class="font-weight-bold">Collaboration</p>
+                          <ul>
+                            <li><a href="https://www.substrate.io/builders-program/" target="_blank"
+                                rel="noopener noreferrer">Substrate Builders Program</a></li>
+                            <li><a href="https://web3.foundation/grants/" target="_blank" rel="noopener noreferrer">Web3
+                                foundation Grants Program</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <ul class="d-flex social-nav mb-5">
+                        <li>
+                          <a href="https://twitter.com/Plasm_Network" target="_blank" rel="noopener noreferrer">
+                            <svg class="icon">
+                              <use xlink:href="#icon-twitter"></use>
+                            </svg>
+                            <span>Twitter</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://discord.gg/Z3nC9U4" target="_blank" rel="noopener noreferrer">
+                            <svg class="icon">
+                              <use xlink:href="#icon-discord"></use>
+                            </svg>
+                            <span>Discord</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://t.me/PlasmOfficial" target="_blank" rel="noopener noreferrer">
+                            <svg class="icon">
+                              <use xlink:href="#icon-telegram"></use>
+                            </svg>
+                            <span>Telegram</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://medium.com/plasm-network" target="_blank" rel="noopener noreferrer">
+                            <svg class="icon">
+                              <use xlink:href="#icon-medium"></use>
+                            </svg>
+                            <span>Medium</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://github.com/PlasmNetwork/Plasm" target="_blank" rel="noopener noreferrer">
+                            <svg class="icon">
+                              <use xlink:href="#icon-github"></use>
+                            </svg>
+                            <span>Github</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+
+                    <p class="copyright">
+                      <svg class="shiden-logo-mark" viewBox="0 0 46 58">
+                        <use xlink:href="#shiden-logo-mark" />
+                      </svg>
+                      © 2021 Shiden Network. All Rights Reserved.
+                    </p>
+                  </div>
+                </div>
+              </footer>
+
+
+              <script>
+                // Hamburger nav for mobile/tablet
+                var hamburgerBtn = document.querySelector('.hamburger-button');
+                hamburgerBtn.onclick = function () {
+                  document.querySelector('body').classList.toggle("is-open");
+                }
+              </script>
+
+              <script>
+                // Lazy load web font
+                var webfonts = document.querySelectorAll(".webfont");
+                webfonts.forEach(function (webfont) {
+                  webfont.rel = "stylesheet";
+                });
+              </script>
+
+              <script>
+                // background parallax on scrolling
+                window.addEventListener('scroll', function () {
+                  var scrollPosition = window.pageYOffset;
+                  var hero = document.querySelector('#hero');
+                  var body = document.querySelector('body');
+
+                  var limit = hero.offsetTop + hero.offsetHeight;
+
+                  if (scrollPosition <= limit) {
+                    body.style.backgroundPositionY = (10 * scrollPosition / limit) + '%';
+                  }
+                });
+              </script>
+
+              <script>
+                // Image fade effect
+                window.addEventListener('scroll', function () {
+                  var fadeElements = document.querySelectorAll('.effect-fade');
+                  fadeElements.forEach(function (elem) {
+                    var elemPos = elem.offsetTop;
+                    var scroll = window.pageYOffset;
+                    var windowHeight = window.innerHeight;
+                    if (scroll > elemPos - windowHeight / 1.5) {
+                      elem.classList.add('effect-scroll');
+                    }
+                  });
+                });
+              </script>
+
+              <script src="js/modernizr-webp.js"></script>
+          </body>
 
 </html>

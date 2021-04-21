@@ -10,7 +10,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
   "browserslist": [
     "last 2 versions",
     "ie >= 11"
