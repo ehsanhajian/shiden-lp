@@ -63,8 +63,8 @@ const watchFiles = () =>
     server: {
       baseDir: "./docs",
     },
-    open: "external",
-    host: "192.168.0.20",
+    // open: "external",
+    // host: "192.168.0.20",
   });
 // watch("./src/sass/**/*.scss", CriticalCss);
 watch(["./src/sass/**/*.scss", "!./src/sass/critical.scss"], CSS);
